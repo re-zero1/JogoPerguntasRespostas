@@ -16,5 +16,25 @@ namespace JogoDesktop
         {
             InitializeComponent();
         }
+
+        private void Pergunta1_Load(object sender, EventArgs e)
+        {
+            lblPergunta.Text = "Qual cidade ocorreu terremotos";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (rdb3.Checked == true)
+            {
+                MessageBox.Show("ACERTOU");
+                
+
+            }
+            else
+            {
+                MessageBox.Show("ERROU");
+                this.Close();
+            }
+        }
     }
 }

@@ -28,89 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblPergunta = new System.Windows.Forms.Label();
+            this.rdb1 = new System.Windows.Forms.RadioButton();
+            this.rdb2 = new System.Windows.Forms.RadioButton();
+            this.rdb3 = new System.Windows.Forms.RadioButton();
+            this.rdb4 = new System.Windows.Forms.RadioButton();
+            this.btnProxima = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblPergunta
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quanto é 2 + 2?";
+            this.lblPergunta.AutoSize = true;
+            this.lblPergunta.Location = new System.Drawing.Point(77, 55);
+            this.lblPergunta.Name = "lblPergunta";
+            this.lblPergunta.Size = new System.Drawing.Size(0, 13);
+            this.lblPergunta.TabIndex = 0;
             // 
-            // radioButton1
+            // rdb1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(80, 124);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(31, 17);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "5";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdb1.AutoSize = true;
+            this.rdb1.Location = new System.Drawing.Point(80, 124);
+            this.rdb1.Name = "rdb1";
+            this.rdb1.Size = new System.Drawing.Size(73, 17);
+            this.rdb1.TabIndex = 1;
+            this.rdb1.TabStop = true;
+            this.rdb1.Text = "São paulo";
+            this.rdb1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdb2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(80, 158);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(31, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "7";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdb2.AutoSize = true;
+            this.rdb2.Location = new System.Drawing.Point(80, 158);
+            this.rdb2.Name = "rdb2";
+            this.rdb2.Size = new System.Drawing.Size(109, 17);
+            this.rdb2.TabIndex = 2;
+            this.rdb2.TabStop = true;
+            this.rdb2.Text = "Cidade do mexico";
+            this.rdb2.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdb3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(80, 192);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(31, 17);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdb3.AutoSize = true;
+            this.rdb3.Location = new System.Drawing.Point(80, 192);
+            this.rdb3.Name = "rdb3";
+            this.rdb3.Size = new System.Drawing.Size(58, 17);
+            this.rdb3.TabIndex = 3;
+            this.rdb3.TabStop = true;
+            this.rdb3.Text = "Toquio";
+            this.rdb3.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdb4
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(80, 228);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(31, 17);
-            this.radioButton4.TabIndex = 4;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdb4.AutoSize = true;
+            this.rdb4.Location = new System.Drawing.Point(80, 228);
+            this.rdb4.Name = "rdb4";
+            this.rdb4.Size = new System.Drawing.Size(56, 17);
+            this.rdb4.TabIndex = 4;
+            this.rdb4.TabStop = true;
+            this.rdb4.Text = "Lisboa";
+            this.rdb4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnProxima
             // 
-            this.button1.Location = new System.Drawing.Point(149, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 45);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Próxima pergunta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnProxima.Location = new System.Drawing.Point(149, 271);
+            this.btnProxima.Name = "btnProxima";
+            this.btnProxima.Size = new System.Drawing.Size(143, 45);
+            this.btnProxima.TabIndex = 5;
+            this.btnProxima.Text = "Próxima pergunta";
+            this.btnProxima.UseVisualStyleBackColor = true;
+            this.btnProxima.Click += new System.EventHandler(this.button1_Click);
             // 
             // Pergunta1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 362);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnProxima);
+            this.Controls.Add(this.rdb4);
+            this.Controls.Add(this.rdb3);
+            this.Controls.Add(this.rdb2);
+            this.Controls.Add(this.rdb1);
+            this.Controls.Add(this.lblPergunta);
             this.Name = "Pergunta1";
             this.Text = "Pergunta1";
+            this.Load += new System.EventHandler(this.Pergunta1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,11 +119,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblPergunta;
+        private System.Windows.Forms.RadioButton rdb1;
+        private System.Windows.Forms.RadioButton rdb2;
+        private System.Windows.Forms.RadioButton rdb3;
+        private System.Windows.Forms.RadioButton rdb4;
+        private System.Windows.Forms.Button btnProxima;
     }
 }
