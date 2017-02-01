@@ -19,7 +19,7 @@ namespace JogoDesktop
 
         private void Pergunta1_Load(object sender, EventArgs e)
         {
-            lblPergunta.Text = "Qual cidade ocorreu terremotos";
+            lblPergunta.Text = "Qual cidade ocorreu terremoto";
         }
 
         private void button1_Click(object sender, EventArgs e)
