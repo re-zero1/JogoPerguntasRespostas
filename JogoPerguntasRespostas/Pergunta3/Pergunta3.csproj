@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64BD9142-B599-4D83-A514-D382113B1974}</ProjectGuid>
+    <ProjectGuid>{503FFB36-FC46-4B73-A872-B529890A335D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JogoDesktop</RootNamespace>
-    <AssemblyName>JogoDesktop</AssemblyName>
+    <RootNamespace>Pergunta3</RootNamespace>
+    <AssemblyName>Pergunta3</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,46 +52,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pergunta1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pergunta1.Designer.cs">
-      <DependentUpon>Pergunta1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pergunta2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pergunta2.Designer.cs">
-      <DependentUpon>Pergunta2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pergunta3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pergunta3.Designer.cs">
-      <DependentUpon>Pergunta3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Pergunta4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pergunta4.Designer.cs">
-      <DependentUpon>Pergunta4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pergunta1.resx">
-      <DependentUpon>Pergunta1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pergunta2.resx">
-      <DependentUpon>Pergunta2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pergunta3.resx">
-      <DependentUpon>Pergunta3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pergunta4.resx">
-      <DependentUpon>Pergunta4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,21 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Games.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Games1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\running_man-128.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ab61741c02c66d62c5a58012ffb51c73.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

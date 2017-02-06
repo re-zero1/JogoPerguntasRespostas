@@ -11,37 +11,39 @@ using System.Windows.Forms;
 
 namespace JogoDesktop
 {
-    public partial class Pergunta1 : Form
+    public partial class Pergunta2 : Form
     {
-        int id_jogador_banco;
-        public Pergunta1(int id_jogador)
+        public Pergunta2()
         {
             InitializeComponent();
-            id_jogador_banco = id_jogador;
         }
 
-        private void Pergunta1_Load(object sender, EventArgs e)
+        private void Pergunta2_Load(object sender, EventArgs e)
         {
-            lblPergunta.Text = "Qual cidade ocorreu terremoto";
+            lblpergunta2.Text = "Qual cidade ocorreu terremoto";
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             using (SqlConnection conexao = new SqlConnection("Server=AME0556325W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
             {
-                using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
+                using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, 2)", conexao))
                 {
-                    comando.Parameters.AddWithValue("Pt",lblPergunta.Text );
-                    comando.Parameters.AddWithValue("Resposcorreta",rdb3.Text );
-                    comando.Parameters.AddWithValue("ID_JOGADOR", id_jogador_banco);
+                    comando.Parameters.AddWithValue("Pt", lblpergunta2.Text);
+                    comando.Parameters.AddWithValue("Resposcorreta", rdb1.Text);
                     conexao.Open();
                     comando.ExecuteNonQuery();
                 }
-                if (rdb3.Checked == true)
+                if (rdb1.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    Pergunta2 p2 = new Pergunta2();
-                    p2.ShowDialog();
+                    Pergunta3 p3 = new Pergunta3();
+                    p3.ShowDialog();
+
+
+
 
 
                 }

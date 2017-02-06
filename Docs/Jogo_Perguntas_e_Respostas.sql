@@ -29,4 +29,10 @@ insert into tb_Jogador(nome) values ('ramon')
 delete from tb_Jogador
 --apaga os dados da tabela
 truncate table tb_jogador
+--acrescenta coluna na tabela
+ALTER TABLE tb_Perguntas ADD id_jogador int  ;
+--exclui a coluna da tabela
+ALTER TABLE tb_jogador DROP COLUMN id_jogador ;
+ 
+
   
