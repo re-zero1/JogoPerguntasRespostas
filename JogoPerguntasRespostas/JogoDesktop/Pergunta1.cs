@@ -40,17 +40,15 @@ namespace JogoDesktop
                 if (rdb3.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    Pergunta2 p2 = new Pergunta2(id_jogador_banco);
-                    p2.ShowDialog();
+                    this.Close();
 
 
                 }
                 else
                 {
                     MessageBox.Show("ERROU");
-                    Pergunta2 p2 = new Pergunta2(id_jogador_banco);
-                    p2.ShowDialog();
-                   // this.Close();
+                    
+                    this.Close();
                 }
             }
         }

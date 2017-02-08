@@ -54,10 +54,10 @@ namespace JogoDesktop
                     {
                         comando.Parameters.AddWithValue("NOME", txtNome.Text);
                         conexao.Open();
-
-                        if(comando.ExecuteNonQuery() == 1)
+                        int id_jogador = (int)comando.ExecuteScalar();
+                        if (id_jogador > 0)
                         {
-                            int id_jogador = (int)comando.ExecuteScalar();
+                            
                             MessageBox.Show("O id inserido foi " +  id_jogador);
 
                             MessageBox.Show("Olá " + txtNome.Text.ToUpper() + ". Você está pronto para continuar!!!", "PLAYYYY", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -66,9 +66,17 @@ namespace JogoDesktop
                             player.SoundLocation = "c:\\vm\\teste\\cars003.wav";
                             player.Play();
                             Pergunta1 p1 = new Pergunta1(id_jogador);
-                            p1.ShowDialog(); 
+                            p1.ShowDialog();
+                            Pergunta2 p2 = new Pergunta2(id_jogador);
+                            p2.ShowDialog();
+                            Pergunta3 p3 = new Pergunta3(id_jogador);
+                            p3.ShowDialog();
+                            Pergunta4 p4 = new Pergunta4(id_jogador);
+                            p4.ShowDialog();
+                            Pergunta5 p5 = new Pergunta5(id_jogador);
+                            p5.ShowDialog();
 
-                          
+
 
                         }
                         else

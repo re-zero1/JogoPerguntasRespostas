@@ -41,7 +41,7 @@ namespace JogoDesktop
                 {
                     MessageBox.Show("ACERTOU");
 
-
+                    this.Close();
 
 
 
@@ -50,6 +50,7 @@ namespace JogoDesktop
                 else
                 {
                     MessageBox.Show("ERROU");
+                    this.Close();
 
                 }
             }

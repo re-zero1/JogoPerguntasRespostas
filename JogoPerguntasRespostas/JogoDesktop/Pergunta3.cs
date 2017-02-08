@@ -40,10 +40,9 @@ namespace JogoDesktop
                 if (rdb2.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    Pergunta4 p4 = new Pergunta4(id_jogador_banco);
-                    p4.ShowDialog();
 
 
+                    this.Close();
 
 
 
@@ -51,9 +50,8 @@ namespace JogoDesktop
                 else
                 {
                     MessageBox.Show("ERROU");
-                    Pergunta4 p4 = new Pergunta4(id_jogador_banco);
-                    p4.ShowDialog();
-                    //this.Close();
+                   
+                    this.Close();
                 }
             }
         }
