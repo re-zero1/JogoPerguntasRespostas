@@ -49,7 +49,7 @@
             // lblPergunta3
             // 
             this.lblPergunta3.AutoSize = true;
-            this.lblPergunta3.Location = new System.Drawing.Point(176, 23);
+            this.lblPergunta3.Location = new System.Drawing.Point(45, 24);
             this.lblPergunta3.Name = "lblPergunta3";
             this.lblPergunta3.Size = new System.Drawing.Size(35, 13);
             this.lblPergunta3.TabIndex = 1;
@@ -111,6 +111,7 @@
             this.Controls.Add(this.lblPergunta3);
             this.Controls.Add(this.btn1);
             this.Name = "Pergunta3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pergunta3";
             this.Load += new System.EventHandler(this.Pergunta3_Load);
             this.ResumeLayout(false);

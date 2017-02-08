@@ -39,12 +39,11 @@
             // lblpergunta2
             // 
             this.lblpergunta2.AutoSize = true;
-            this.lblpergunta2.Location = new System.Drawing.Point(179, 30);
+            this.lblpergunta2.Location = new System.Drawing.Point(39, 26);
             this.lblpergunta2.Name = "lblpergunta2";
             this.lblpergunta2.Size = new System.Drawing.Size(35, 13);
             this.lblpergunta2.TabIndex = 0;
             this.lblpergunta2.Text = "label1";
-        
             // 
             // button1
             // 
@@ -52,7 +51,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Confirma";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -112,6 +111,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblpergunta2);
             this.Name = "Pergunta2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pergunta2";
             this.Load += new System.EventHandler(this.Pergunta2_Load);
             this.ResumeLayout(false);

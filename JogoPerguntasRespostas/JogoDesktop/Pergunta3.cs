@@ -13,9 +13,11 @@ namespace JogoDesktop
 {
     public partial class Pergunta3 : Form
     {
-        public Pergunta3()
+        int id_jogador_banco;
+        public Pergunta3(int id_jogador)
         {
             InitializeComponent();
+            id_jogador_banco = id_jogador;
         }
 
         private void Pergunta3_Load(object sender, EventArgs e)
@@ -27,17 +29,18 @@ namespace JogoDesktop
         {
             using (SqlConnection conexao = new SqlConnection("Server=AME0556325W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
             {
-                using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, 2)", conexao))
+                using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
                 {
                     comando.Parameters.AddWithValue("Pt", lblPergunta3.Text);
                     comando.Parameters.AddWithValue("Resposcorreta", rdb2.Text);
+                    comando.Parameters.AddWithValue("ID_JOGADOR", id_jogador_banco);
                     conexao.Open();
                     comando.ExecuteNonQuery();
                 }
                 if (rdb2.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    Pergunta4 p4 = new Pergunta4();
+                    Pergunta4 p4 = new Pergunta4(id_jogador_banco);
                     p4.ShowDialog();
 
 
@@ -48,7 +51,9 @@ namespace JogoDesktop
                 else
                 {
                     MessageBox.Show("ERROU");
-                    this.Close();
+                    Pergunta4 p4 = new Pergunta4(id_jogador_banco);
+                    p4.ShowDialog();
+                    //this.Close();
                 }
             }
         }

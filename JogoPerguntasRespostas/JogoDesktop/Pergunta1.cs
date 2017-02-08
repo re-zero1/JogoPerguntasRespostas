@@ -29,7 +29,7 @@ namespace JogoDesktop
         {
             using (SqlConnection conexao = new SqlConnection("Server=AME0556325W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
             {
-                using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
+                using (SqlCommand comando = new SqlCommand("insert into tb_perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
                 {
                     comando.Parameters.AddWithValue("Pt",lblPergunta.Text );
                     comando.Parameters.AddWithValue("Resposcorreta",rdb3.Text );
@@ -40,7 +40,7 @@ namespace JogoDesktop
                 if (rdb3.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    Pergunta2 p2 = new Pergunta2();
+                    Pergunta2 p2 = new Pergunta2(id_jogador_banco);
                     p2.ShowDialog();
 
 
@@ -48,7 +48,9 @@ namespace JogoDesktop
                 else
                 {
                     MessageBox.Show("ERROU");
-                    this.Close();
+                    Pergunta2 p2 = new Pergunta2(id_jogador_banco);
+                    p2.ShowDialog();
+                   // this.Close();
                 }
             }
         }

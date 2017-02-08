@@ -11,37 +11,36 @@ using System.Windows.Forms;
 
 namespace JogoDesktop
 {
-    public partial class Pergunta4 : Form
+    public partial class Pergunta5 : Form
     {
         int id_jogador_banco;
-        public Pergunta4(int id_jogador)
+        public Pergunta5(int id_jogador)
         {
             InitializeComponent();
             id_jogador_banco = id_jogador;
         }
 
-        private void Pergunta4_Load(object sender, EventArgs e)
+        private void lblpergunta5_Load(object sender, EventArgs e)
         {
-            lblPergunta4.Text = "qual nome da obra cujo, personagem principal morre";
+            lblpergunta5.Text = "Qual e o nome do protagonista que teve sua mãe morta pela propria familia";
         }
 
-        private void btn_Click(object sender, EventArgs e)
+        private void btn5_Click(object sender, EventArgs e)
         {
             using (SqlConnection conexao = new SqlConnection("Server=AME0556325W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
             {
                 using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
                 {
-                    comando.Parameters.AddWithValue("Pt", lblPergunta4.Text);
-                    comando.Parameters.AddWithValue("Resposcorreta", rdb3.Text);
+                    comando.Parameters.AddWithValue("Pt", lblpergunta5.Text);
+                    comando.Parameters.AddWithValue("Resposcorreta", rdb4.Text);
                     comando.Parameters.AddWithValue("ID_JOGADOR", id_jogador_banco);
                     conexao.Open();
                     comando.ExecuteNonQuery();
                 }
-                if (rdb3.Checked == true)
+                if (rdb4.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    Pergunta5 p4 = new Pergunta5(id_jogador_banco);
-                    p4.ShowDialog();
+
 
 
 
@@ -51,11 +50,14 @@ namespace JogoDesktop
                 else
                 {
                     MessageBox.Show("ERROU");
-                    Pergunta5 p4 = new Pergunta5(id_jogador_banco);
-                    p4.ShowDialog();
-                    //this.Close();
+
                 }
             }
+        }
+
+        private void lblpergunta5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
