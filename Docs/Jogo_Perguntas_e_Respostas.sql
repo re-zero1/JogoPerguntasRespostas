@@ -10,6 +10,7 @@ create table tb_Jogador(
 select * from tb_Jogador
 -- selecionar toda tabela perguntas
 select * from tb_perguntas
+
 -- insere nomes na tabela jogador
 insert into tb_Jogador(nome) values('Amanda')
 insert into tb_Jogador(nome) values('Fernanda')
@@ -27,8 +28,10 @@ delete from tb_Jogador where id = 12
 insert into tb_Jogador(nome) values ('ramon')
 --deleta os dados da tabela
 delete from tb_Jogador
+delete from tb_perguntas
 --apaga os dados da tabela
 truncate table tb_jogador
+truncate table tb_perguntas
 --acrescenta coluna na tabela
 ALTER TABLE tb_Perguntas ADD id_jogador int  ;
 --exclui a coluna da tabela
