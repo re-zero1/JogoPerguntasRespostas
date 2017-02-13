@@ -27,20 +27,22 @@ namespace JogoDesktop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conexao = new SqlConnection("Server=AME0556325W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
-            {
-                using (SqlCommand comando = new SqlCommand("insert into tb_perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
-                {
-                    comando.Parameters.AddWithValue("Pt",lblPergunta.Text );
-                    comando.Parameters.AddWithValue("Resposcorreta",rdb3.Text );
-                    comando.Parameters.AddWithValue("ID_JOGADOR", id_jogador_banco);
-                    conexao.Open();
-                    comando.ExecuteNonQuery();
-                }
+           
                 if (rdb3.Checked == true)
                 {
                     MessageBox.Show("ACERTOU");
-                    this.Close();
+                using (SqlConnection conexao = new SqlConnection("Server=AME0510030W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
+                {
+                    using (SqlCommand comando = new SqlCommand("insert into tb_perguntas(Pergunta, resposta_correta, id_jogador) values(@Pt, @Resposcorreta, @ID_JOGADOR)", conexao))
+                    {
+                        comando.Parameters.AddWithValue("Pt", lblPergunta.Text);
+                        comando.Parameters.AddWithValue("Resposcorreta", rdb3.Text);
+                        comando.Parameters.AddWithValue("ID_JOGADOR", id_jogador_banco);
+                        conexao.Open();
+                        comando.ExecuteNonQuery();
+                    }
+                }
+                this.Close();
 
 
                 }
@@ -50,7 +52,7 @@ namespace JogoDesktop
                     
                     this.Close();
                 }
-            }
+            
         }
     }
 }

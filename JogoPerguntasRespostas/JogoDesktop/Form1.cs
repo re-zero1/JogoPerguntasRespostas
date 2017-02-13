@@ -46,9 +46,9 @@ namespace JogoDesktop
                 txtNome.Focus();
             }else{
 
-                //início do código para inserir o jogador na tabela
+                //início do código para inserir o jogador na tabela AME0510030W10-1\SQLEXPRESS
                 //using System.Data.SqlClient;
-                using (SqlConnection conexao = new SqlConnection("Server=AME0556325W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
+                using (SqlConnection conexao = new SqlConnection("Server=AME0510030W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
                 {
                     using(SqlCommand comando = new SqlCommand("insert into tb_jogador(nome) OUTPUT INSERTED.ID values(@NOME)",conexao))
                     {
@@ -62,9 +62,9 @@ namespace JogoDesktop
 
                             MessageBox.Show("Olá " + txtNome.Text.ToUpper() + ". Você está pronto para continuar!!!", "PLAYYYY", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-                            player.SoundLocation = "c:\\vm\\teste\\cars003.wav";
-                            player.Play();
+                           // System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+                            //player.SoundLocation = "c:\\vm\\teste\\cars003.wav";
+                            //player.Play();
                             Pergunta1 p1 = new Pergunta1(id_jogador);
                             p1.ShowDialog();
                             Pergunta2 p2 = new Pergunta2(id_jogador);
